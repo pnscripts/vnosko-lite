@@ -1,0 +1,30 @@
+{
+  "name": "@pnscripts/vnosko-lite",
+  "version": "1.0.0",
+  "description": "Read CSV, TSV and XLSX in the browser or Node without dependencies, find the header row, match columns to your fields and get typed, checked rows. MIT. By PN Scripts.",
+  "author": "PN Scripts <office@pnscripts.com> (https://pnscripts.com)",
+  "license": "MIT",
+  "homepage": "https://github.com/pnscripts/vnosko-lite#readme",
+  "repository": { "type": "git", "url": "git+https://github.com/pnscripts/vnosko-lite.git" },
+  "bugs": { "url": "https://github.com/pnscripts/vnosko-lite/issues" },
+  "keywords": ["csv", "xlsx", "excel", "import", "parser", "spreadsheet", "validation", "column mapping", "no dependencies"],
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": { "types": "./dist/index.d.ts", "import": "./dist/index.js", "require": "./dist/index.cjs" }
+  },
+  "files": ["dist", "README.md", "LICENSE", "CHANGELOG.md"],
+  "sideEffects": false,
+  "engines": { "node": ">=18" },
+  "scripts": {
+    "build": "node tools/build.js",
+    "test": "node --test tests/*.test.js",
+    "prepack": "node tools/build.js"
+  },
+  "devDependencies": {
+    "esbuild": "0.28.2"
+  },
+  "publishConfig": { "access": "public" }
+}
